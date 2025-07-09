@@ -57,10 +57,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
     switch (iMessage) {
     case WM_CREATE:
         hwndScrollBar = CreateWindow(
-            TEXT("SCROLLBAR"),
-            NULL,
-            WS_VISIBLE | WS_CHILD | SBS_VERT, // 스타일 (SBS_VERT는 세로 스크롤바)
-            100, 100, 20, 400,
+            TEXT("EDIT"),
+            TEXT(""),
+            WS_TABSTOP | WS_VISIBLE | WS_CHILD | WS_BORDER | ES_LEFT, // 스타일 (SBS_VERT는 세로 스크롤바)
+            100, 100, 200, 400,
             hWnd,
             (HMENU)2,
             GetModuleHandle(NULL),
